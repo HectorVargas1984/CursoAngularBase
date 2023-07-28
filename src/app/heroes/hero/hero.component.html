@@ -1,0 +1,39 @@
+<h1>{{ alias }}</h1>
+
+<dl>
+  <td>Nombre:</td>
+  <dd>{{ nombre }}</dd>
+
+  <td>Edad:</td>
+  <dd>{{ edad }}</dd>
+
+  <td>Metodo:</td>
+  <dd>{{ getHeroeDescripcion() }}</dd>
+
+  <td>Capitalizado:</td>
+  <dd>{{ capitalizate }}</dd>
+</dl>
+
+<button
+  class="btn btn-primary"
+  (click)="setCambiarNombre()"
+  *ngIf="alias !== 'Spiderman'"
+>
+  Cambiar Nombre
+</button>
+
+<button
+  class="btn btn-primary ms-2"
+  (click)="setCambiarEdad()"
+  *ngIf="edad !== 19"
+>
+  Cambiar edad
+</button>
+
+<button
+  class="btn btn-success ms-2"
+  (click)="resetiarInformacion()"
+  *ngIf="alias === 'Spiderman'"
+>
+  Reset
+</button>
